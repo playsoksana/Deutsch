@@ -1,0 +1,135 @@
+.App {
+  text-align: center;
+  padding: 1rem 2rem;
+
+  background-color: rgba(250, 235, 215, 0.478);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.word {
+  display: flex;
+
+ margin: 0.5rem 0;
+ padding: 0.3rem 1rem;
+  box-shadow: 0 1px 3px #575555 inset;
+  border-radius: 0.2rem;
+  background-color: aliceblue;
+cursor: pointer;
+}
+
+.scroll {
+  height: 100vh;
+  overflow: auto;
+}
+
+.currentWord {
+background-color: rgb(187, 153, 153);
+}
+
+.rich {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+ padding: 0.3rem 1rem;
+  border: 0.1rem solid rgb(63, 61, 61) ;
+  border-radius: 0.2rem;
+
+  background-color: #7eb890b1;
+
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.btn {
+  min-width: 15rem;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+.btn:hover {
+  background-position: right center;
+}
+
+.n {
+
+  background-color: #30caf085;
+}
+
+.m {
+
+  background-color: rgba(0, 128, 0, 0.499);
+}
+
+.f {
+  background-color: rgba(255, 0, 0, 0.496);
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 50%;
+  right: 0.2rem;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.iconBin {
+  height: 0.8rem;
+  pointer-events: none;
+}
