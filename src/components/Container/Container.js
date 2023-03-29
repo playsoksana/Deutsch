@@ -3,7 +3,6 @@ import { useSpeechSynthesis } from 'react-speech-kit';
 
 import Box1 from "../Box1/Box1";
 import Box2 from "../Box2/Box2";
-
 import Bin from "../../icons/bin.svg";
 
 
@@ -14,31 +13,19 @@ const Container = ({ a, b, deleteWorld }) => {
 
 
     const { speak, voices } = useSpeechSynthesis();
-    console.log(voices);
 
     const addCurrent = (id) => {
         setCurrId(id);
     }
 
     const addAnswer = (id) => {
-
-        setTimeout(() => {
-            setRichtik(pre => [...pre, id]);
-        }, 1000);
         const word = b.find((e) => {
             return e.id === currId
         });
         if (word) {
-
-
-            speak({ text: word?.deutsch, voice: voices[2] })
+            speak({ text: word?.deutsch, voice: voices[2] });
+            setRichtik(pre => [...pre, id]);
         }
-
-        // console.log(11111111, word);
-
-
-
-
     };
 
     const getArr = () => {
@@ -49,8 +36,6 @@ const Container = ({ a, b, deleteWorld }) => {
             }
         })
     }
-
-
 
     return <div>
         <div>
