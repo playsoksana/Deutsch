@@ -3,10 +3,9 @@ import { useSpeechSynthesis } from 'react-speech-kit';
 
 import BoxWithTextNativeLanguage from "../BoxWithTextNativeLanguage/index.js";
 import BoxWithTextGerman from "../BoxWithTextGerman/index.js";
-import Bin from "../../icons/bin.svg";
+import Answers from "../Answers/index.js";
 
-
-const ColumnsWithWords = ({ arrNative, b, deleteWorld }) => {
+const ColumnsWithWords = (props) => {
     const [currId, setCurrId] = useState(null);
     const [richtik, setRichtik] = useState([]);
 
@@ -19,7 +18,7 @@ const ColumnsWithWords = ({ arrNative, b, deleteWorld }) => {
     }
 
     const addAnswer = (id) => {
-        const word = b.find((e) => {
+        const word = props.arrGerman.find((e) => {
             return e.id === currId
         });
         if (word) {
@@ -30,58 +29,85 @@ const ColumnsWithWords = ({ arrNative, b, deleteWorld }) => {
 
     const getArr = () => {
         return richtik.map((id) => {
-            const elByRichtic = arrNative.find(e => e.id === id);
+            const elByRichtic = props.arrNative.find(e => e.id === id);
             if (elByRichtic !== -1) {
                 return elByRichtic
             }
         });
     }
 
+    // --- //
+
+    const renderAnswers = () => {
+        return (
+            getArr().map(chosenWord => {
+                if (chosenWord === undefined) {
+                    return null;
+                }
+
+                return (
+                    <Answers
+                        chosenWord={chosenWord}
+                        deleteWorld={() => props.deleteWorld(chosenWord?.id)} />
+                );
+            })
+        );
+    };
+
     const renderNativeColumn = () => {
         return (
-            arrNative.map((objColNative) => {
+            props.arrNative.map((objNative) => {
                 return (
                     <BoxWithTextNativeLanguage
-                        addCurrent={() => { addCurrent(objColNative.id) }}
+                        addCurrent={() => { addCurrent(objNative.id) }}
                         currId={currId}
-                        data={objColNative}
-                        richtik={richtik.includes(objColNative.id)}
+                        data={objNative}
+                        richtik={richtik.includes(objNative.id)}
                     />)
             })
         )
     };
 
-    return <div>
-        <div>
-            {getArr().map(e => {
-                if (e === undefined) {
-                    return null;
-                }
+    const renderGermanColumn = () => {
+        return (
+            props.arrGerman.map((objGerman) => {
                 return (
-                    <div className="Container">
+                    <BoxWithTextGerman
+                        currId={currId}
+                        addAnswer={() => addAnswer(currId)}
+                        data={objGerman}
+                        richtik={richtik.includes(objGerman.id)}
+                    />)
+            })
+        );
+    };
 
-                        <div className="rich">{e?.native}</div>
-                        <div className={`rich ${e?.kind}`}>{e?.deutsch}
-                            <div onClick={() => deleteWorld(e?.id)} className="deleteBtn"><img className="iconBin" src={Bin} alt="Your SVG" /></div>
-                        </div>
-                    </div>
-                )
-            }
-            )}
-        </div>
+    const renderColumsForTask = () => {
+        return (
+            <div className="Container">
+                <div className="scroll">
+                    {renderNativeColumn()}
+                </div>
+                <div className="scroll">
+                    {renderGermanColumn()}
+                </div>
+            </div>
+        );
+    };
 
-        <div className="Container">
-            <div className="scroll">
-                {renderNativeColumn()}
+    return (
+        <div>
+            <div>
+                {renderAnswers()}
             </div>
-            <div className="scroll">
-                {b.map((obj, i) => {
-                    return (
-                        <BoxWithTextGerman currId={currId} addAnswer={() => addAnswer(currId)} data={obj} richtik={richtik.includes(obj.id)} />)
-                })}
-            </div>
-        </div>
-    </div>
+            {renderColumsForTask()}
+        </div>)
+};
+
+ColumnsWithWords.propsDefault = {
+    arrNative: [],
+    arrGerman: [],
+    deleteWorld: () => { },
 };
 
 export default ColumnsWithWords;

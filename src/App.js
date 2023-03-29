@@ -59,7 +59,7 @@ function App() {
         <button className="btn" onClick={() => { setType("verb") }}>Verb</button>
         <button className="btn" onClick={() => { setType("substantiv") }}>Substantiv</button>
       </ul>
-      <ColumnsWithWords arrNative={firstCol} b={secondCol} deleteWorld={deleteWorld} />
+      <ColumnsWithWords arrNative={firstCol} arrGerman={secondCol} deleteWorld={deleteWorld} />
     </div>
   );
 }

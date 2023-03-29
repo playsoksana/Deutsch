@@ -55,26 +55,6 @@
 }
 
 
-.rich {
-  position: relative;
-  max-height: 100vh;
-
-  display: flex;
-  justify-content: space-between;
-
-  margin: 0.5rem 0;
-  padding: 0.3rem 1rem;
-  border: 0.1rem solid rgb(63, 61, 61);
-  border-radius: 0.2rem;
-
-  background-color: #7eb890b1;
-
-  font-size: 12px;
-
-
-  overflow: auto;
-}
-
 .btn {
   min-width: 15rem;
   text-decoration: none;
@@ -94,25 +74,4 @@
 
 .btn:hover {
   background-position: right center;
-}
-
-
-
-.deleteBtn {
-  position: absolute;
-  top: 50%;
-  right: 0.2rem;
-  transform: translateY(-50%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 1.5rem;
-  cursor: pointer;
-}
-
-.iconBin {
-  height: 0.8rem;
-  pointer-events: none;
 }
