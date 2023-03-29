@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import classNames from "../../lib/classNames";
+import { useSpeechSynthesis } from 'react-speech-kit';
 
 import Box1 from "../Box1/Box1";
 import Box2 from "../Box2/Box2";
@@ -11,14 +11,34 @@ const Container = ({ a, b, deleteWorld }) => {
     const [currId, setCurrId] = useState(null);
     const [richtik, setRichtik] = useState([]);
 
+
+
+    const { speak, voices } = useSpeechSynthesis();
+    console.log(voices);
+
     const addCurrent = (id) => {
         setCurrId(id);
     }
 
     const addAnswer = (id) => {
-        if (id === currId) {
-            setRichtik(pre => [...pre, id])
+
+        setTimeout(() => {
+            setRichtik(pre => [...pre, id]);
+        }, 1000);
+        const word = b.find((e) => {
+            return e.id === currId
+        });
+        if (word) {
+
+
+            speak({ text: word?.deutsch, voice: voices[2] })
         }
+
+        // console.log(11111111, word);
+
+
+
+
     };
 
     const getArr = () => {
@@ -61,7 +81,7 @@ const Container = ({ a, b, deleteWorld }) => {
             <div className="scroll">
                 {b.map((obj, i) => {
                     return (
-                        <Box2 currId={currId} addAnswer={addAnswer} data={obj} richtik={richtik.includes(obj.id)} />)
+                        <Box2 currId={currId} addAnswer={() => addAnswer(currId)} data={obj} richtik={richtik.includes(obj.id)} />)
                 })}
             </div>
         </div>
