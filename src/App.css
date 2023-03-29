@@ -46,25 +46,13 @@
   gap: 10px;
 }
 
-.word {
-  display: flex;
 
- margin: 0.5rem 0;
- padding: 0.3rem 1rem;
-  box-shadow: 0 1px 3px #575555 inset;
-  border-radius: 0.2rem;
-  background-color: aliceblue;
-cursor: pointer;
-}
 
 .scroll {
   height: 100vh;
   overflow: auto;
 }
 
-.currentWord {
-background-color: rgb(187, 153, 153);
-}
 
 .rich {
   position: relative;
@@ -101,19 +89,7 @@ background-color: rgb(187, 153, 153);
   background-position: right center;
 }
 
-.n {
 
-  background-color: #30caf085;
-}
-
-.m {
-
-  background-color: rgba(0, 128, 0, 0.499);
-}
-
-.f {
-  background-color: rgba(255, 0, 0, 0.496);
-}
 
 .deleteBtn {
   position: absolute;

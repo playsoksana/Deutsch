@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useSpeechSynthesis } from 'react-speech-kit';
 
-import Box1 from "../Box1/Box1";
-import Box2 from "../Box2/Box2";
+import BoxWithTextNativeLanguage from "../BoxWithTextNativeLanguage/index.js";
+import BoxWithTextGerman from "../BoxWithTextGerman/index.js";
 import Bin from "../../icons/bin.svg";
 
 
-const Container = ({ a, b, deleteWorld }) => {
+const ColumnsWithWords = ({ arrNative, b, deleteWorld }) => {
     const [currId, setCurrId] = useState(null);
     const [richtik, setRichtik] = useState([]);
 
@@ -30,16 +30,29 @@ const Container = ({ a, b, deleteWorld }) => {
 
     const getArr = () => {
         return richtik.map((id) => {
-            const elByRichtic = a.find(e => e.id === id);
+            const elByRichtic = arrNative.find(e => e.id === id);
             if (elByRichtic !== -1) {
                 return elByRichtic
             }
-        })
+        });
     }
+
+    const renderNativeColumn = () => {
+        return (
+            arrNative.map((objColNative) => {
+                return (
+                    <BoxWithTextNativeLanguage
+                        addCurrent={() => { addCurrent(objColNative.id) }}
+                        currId={currId}
+                        data={objColNative}
+                        richtik={richtik.includes(objColNative.id)}
+                    />)
+            })
+        )
+    };
 
     return <div>
         <div>
-
             {getArr().map(e => {
                 if (e === undefined) {
                     return null;
@@ -47,7 +60,7 @@ const Container = ({ a, b, deleteWorld }) => {
                 return (
                     <div className="Container">
 
-                        <div className="rich">{e?.rus}</div>
+                        <div className="rich">{e?.native}</div>
                         <div className={`rich ${e?.kind}`}>{e?.deutsch}
                             <div onClick={() => deleteWorld(e?.id)} className="deleteBtn"><img className="iconBin" src={Bin} alt="Your SVG" /></div>
                         </div>
@@ -59,18 +72,16 @@ const Container = ({ a, b, deleteWorld }) => {
 
         <div className="Container">
             <div className="scroll">
-                {a.map((obj) => {
-                    return (
-                        <Box1 addCurrent={addCurrent} currId={currId} data={obj} richtik={richtik.includes(obj.id)} />)
-                })}</div>
+                {renderNativeColumn()}
+            </div>
             <div className="scroll">
                 {b.map((obj, i) => {
                     return (
-                        <Box2 currId={currId} addAnswer={() => addAnswer(currId)} data={obj} richtik={richtik.includes(obj.id)} />)
+                        <BoxWithTextGerman currId={currId} addAnswer={() => addAnswer(currId)} data={obj} richtik={richtik.includes(obj.id)} />)
                 })}
             </div>
         </div>
     </div>
-}
+};
 
-export default Container;
+export default ColumnsWithWords;

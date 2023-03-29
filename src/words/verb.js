@@ -2,76 +2,76 @@
 const verb = [
     {
         "deutsch": "Sprechen",
-        "rus": "говорить",
+        "native": "говорить",
         id: 10001
     },
     {
         "deutsch": "Leben",
-        "rus": "жить",
+        "native": "жить",
         id: 10002
     },
     {
         "deutsch": "fsf",
-        "rus": "gssdg",
+        "native": "gssdg",
         id: 10003
     },
     {
         "deutsch": "Kommen",
-        "rus": "приходить",
+        "native": "приходить",
         id: 10004
     },
     {
         "deutsch": "5",
-        "rus": "5",
+        "native": "5",
         id: 10005
     }, {
         "deutsch": "6",
-        "rus": "6",
+        "native": "6",
         id: 10006
     },
     {
         "deutsch": "7",
-        "rus": "7",
+        "native": "7",
         id: 10007
     },
     {
         "deutsch": "8",
-        "rus": "8",
+        "native": "8",
         id: 10008
     },
     {
         "deutsch": "9",
-        "rus": "9",
+        "native": "9",
         id: 10009
     },
     {
         "deutsch": "10",
-        "rus": "10",
+        "native": "10",
         id: 10010
     },
     {
         "deutsch": "11xzcvxv ssfsgfs srfrsf ardafs",
-        "rus": "11",
+        "native": "11",
         id: 10011
     },
     {
         "deutsch": "12",
-        "rus": "12",
+        "native": "12",
         id: 10012
     },
     {
         "deutsch": "13",
-        "rus": "13",
+        "native": "13",
         id: 10013
     },
     {
         "deutsch": "14",
-        "rus": "14",
+        "native": "14",
         id: 10014
     },
     {
         "deutsch": "15",
-        "rus": "15",
+        "native": "15",
         id: 10015
     },
 

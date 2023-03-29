@@ -1,0 +1,23 @@
+.word {
+    display: flex;
+
+    margin: 0.5rem 0;
+    padding: 0.3rem 1rem;
+    box-shadow: 0 1px 3px #575555 inset;
+    border-radius: 0.2rem;
+    background-color: aliceblue;
+
+    cursor: pointer;
+}
+
+.nStyles {
+    background-color: #30caf085;
+}
+
+.mStyles {
+     background-color: rgba(0, 128, 0, 0.499);
+  }
+
+.fStyles {
+    background-color: rgba(255, 0, 0, 0.496);
+}

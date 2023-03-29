@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Container from "./components/Container/Container";
+import ColumnsWithWords from "./components/ColumnsWithWords/index.js";
 
 
 
@@ -59,7 +59,7 @@ function App() {
         <button className="btn" onClick={() => { setType("verb") }}>Verb</button>
         <button className="btn" onClick={() => { setType("substantiv") }}>Substantiv</button>
       </ul>
-      <Container a={firstCol} b={secondCol} deleteWorld={deleteWorld} />
+      <ColumnsWithWords arrNative={firstCol} b={secondCol} deleteWorld={deleteWorld} />
     </div>
   );
 }
