@@ -1,80 +1,122 @@
-
 const verb = [
     {
-        "deutsch": "Sprechen",
-        "native": "говорить",
+        "deutsch": "anziehen",
+        "native": "надевать (одежду)",
         id: 10001
     },
     {
-        "deutsch": "Leben",
-        "native": "жить",
+        "deutsch": "ausziehen",
+        "native": "снимать (одежду)",
         id: 10002
     },
     {
-        "deutsch": "fsf",
-        "native": "gssdg",
+        "deutsch": "antworten",
+        "native": "отвечать",
         id: 10003
     },
     {
-        "deutsch": "Kommen",
-        "native": "приходить",
+        "deutsch": "arbeiten",
+        "native": "работать",
         id: 10004
     },
     {
-        "deutsch": "5",
-        "native": "5",
+        "deutsch": "atmen",
+        "native": "дышать",
         id: 10005
     }, {
-        "deutsch": "6",
-        "native": "6",
+        "deutsch": "sich ärgern",
+        "native": "злиться",
         id: 10006
     },
     {
-        "deutsch": "7",
-        "native": "7",
+        "deutsch": "aussehen",
+        "native": "выглядеть",
         id: 10007
     },
     {
-        "deutsch": "8",
-        "native": "8",
+        "deutsch": "backen",
+        "native": "печь",
         id: 10008
     },
     {
-        "deutsch": "9",
-        "native": "9",
+        "deutsch": "baden",
+        "native": "купаться",
         id: 10009
     },
     {
-        "deutsch": "10",
-        "native": "10",
+        "deutsch": "basteln",
+        "native": "мастерить",
         id: 10010
     },
     {
-        "deutsch": "11xzcvxv ssfsgfs srfrsf ardafs",
-        "native": "11",
+        "deutsch": "bauen",
+        "native": "строить",
         id: 10011
     },
     {
-        "deutsch": "12",
-        "native": "12",
+        "deutsch": "bedeuten",
+        "native": "означать",
         id: 10012
     },
     {
-        "deutsch": "13",
-        "native": "13",
+        "deutsch": "bekommen",
+        "native": "получать",
         id: 10013
     },
     {
-        "deutsch": "14",
-        "native": "14",
+        "deutsch": "besuchen",
+        "native": "посещать",
         id: 10014
     },
     {
-        "deutsch": "15",
-        "native": "15",
+        "deutsch": "bewundern",
+        "native": "восхищаться",
         id: 10015
     },
-
-
+    {
+        "deutsch": "bilden",
+        "native": "образовывать (построить предложение)",
+        id: 10016
+    },
+    {
+        "deutsch": "besichtigen",
+        "native": " осматривать",
+        id: 10017
+    },
+    {
+        "deutsch": "beginnen",
+        "native": "начинать",
+        id: 10018
+    },
+    {
+        "deutsch": "sich befinden",
+        "native": "находиться",
+        id: 10019
+    },
+    {
+        "deutsch": "bitten",
+        "native": "просить",
+        id: 10020
+    },
+    {
+        "deutsch": "bleiben",
+        "native": "оставаться",
+        id: 10021
+    },
+    {
+        "deutsch": "bringen",
+        "native": "приносить",
+        id: 10022
+    },
+    {
+        "deutsch": "brauchen",
+        "native": "нуждаться",
+        id: 10023
+    },
+    {
+        "deutsch": "sich beschäftigen",
+        "native": "заниматься(заниматься со своей собакой)",
+        id: 10024
+    },
 ];
 export default verb;
