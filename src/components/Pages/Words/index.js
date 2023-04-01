@@ -51,11 +51,12 @@ const Words = () => {
 
     return (
         <div>
-            <ColumnsWithWords arrNative={firstCol} arrGerman={secondCol} deleteWorld={deleteWorld} />
             <ul>
                 <button className="btn" onClick={() => { setType("verb") }}>Verb</button>
                 <button className="btn" onClick={() => { setType("substantiv") }}>Substantiv</button>
             </ul>
+            <ColumnsWithWords arrNative={firstCol} arrGerman={secondCol} deleteWorld={deleteWorld} />
+
         </div>
 
     );
