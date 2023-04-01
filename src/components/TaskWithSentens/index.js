@@ -21,6 +21,7 @@ const TaskWithSentens = (props) => {
     let word = arrSentensDeutsch[counterWord];
 
     let optArr = options[word];
+    console.log(sentensDeutsch);
     if (optArr) {
         optArr = [...optArr] || [].sort(() => Math.random() - 0.5);
     }
