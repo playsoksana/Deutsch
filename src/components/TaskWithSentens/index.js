@@ -14,20 +14,21 @@ const TaskWithSentens = (props) => {
 
     const { speak, voices } = useSpeechSynthesis();
 
-    let sentensNative = props.sentensSort[counter].native;
-    let sentensDeutsch = props.sentensSort[counter].deutsch;
-    let arrSentensDeutsch = sentensDeutsch.match(/\b(\w+)\b/g);
+
+    const sentensDeutsch = props.sentensSort[counter].deutsch;
+    const arrSentensDeutsch = sentensDeutsch.match(/\b(\w+)\b/g);
     const lengthSentens = arrSentensDeutsch.length;
-    let word = arrSentensDeutsch[counterWord];
-
+    const word = arrSentensDeutsch[counterWord];
     let optArr = options[word];
-    console.log(sentensDeutsch);
-    if (optArr) {
-        optArr = [...optArr] || [].sort(() => Math.random() - 0.5);
-    }
 
-    const onChoice = (word) => {
-        setAnswer(pre => [...pre, word]);
+
+
+    const onChoice = (wordChoiced) => {
+        if (word === wordChoiced) {
+            speak({ text: word, voice: voices[2] });
+        }
+
+        setAnswer(pre => [...pre, wordChoiced]);
         setCounterWord(pre => pre + 1);
     }
 
@@ -70,13 +71,19 @@ const TaskWithSentens = (props) => {
             return;
         };
 
-        const list = optArr.map((word) => {
-            return (<div className={styles.btnWord} onClick={() => { onChoice(word) }}>{word}</div>)
-        })
-        return (
-            <div className={styles.BtnWrap}>
-                {list}
-            </div>)
+        if (optArr) {
+            optArr = [...optArr].sort(() => Math.random() - 0.5);
+            const list = optArr.map((word) => {
+                return (<div key={word} className={styles.btnWord} onClick={() => { onChoice(word) }}>{word}</div>)
+            })
+
+            return (
+                <div className={styles.BtnWrap}>
+                    {list}
+                </div>);
+        }
+
+        return null;
     };
 
 
@@ -128,7 +135,7 @@ const TaskWithSentens = (props) => {
     return (
         <div className={styles.wrap}>
             <div className={styles.sentenceNative}>
-                {sentensNative}
+                {props.sentensSort[counter].native}
             </div>
             {renderOptionForChoice()}
             {renderResult()}

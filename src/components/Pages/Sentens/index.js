@@ -8,9 +8,9 @@ const Sentens = () => {
     const sentensSort = [...sentens].sort(() => Math.random() - 0.5);
 
     return (
-
-        <TaskWithSentens sentensSort={sentensSort} />
-
+        <Container>
+            <TaskWithSentens sentensSort={sentensSort} />
+        </Container>
     );
 };
 
