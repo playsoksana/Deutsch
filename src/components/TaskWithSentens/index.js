@@ -22,7 +22,6 @@ const TaskWithSentens = (props) => {
     let optArr = options[word];
 
 
-
     const onChoice = (wordChoiced) => {
         if (word === wordChoiced) {
             speak({ text: word, voice: voices[2] });
@@ -57,6 +56,12 @@ const TaskWithSentens = (props) => {
 
 
     useEffect(() => {
+        if (optArr) {
+            optArr = [...optArr].sort(() => Math.random() - 0.5);
+        }
+    }, []);
+
+    useEffect(() => {
         if (sentensDeutsch === answer.join(" ")) {
             speak({ text: sentensDeutsch, voice: voices[2] });
         }
@@ -67,23 +72,18 @@ const TaskWithSentens = (props) => {
 
 
     const renderOptionForChoice = () => {
-        if (counterWord === lengthSentens) {
-            return;
+        if (counterWord === lengthSentens || !optArr) {
+            return null;
         };
 
-        if (optArr) {
-            optArr = [...optArr].sort(() => Math.random() - 0.5);
-            const list = optArr.map((word) => {
-                return (<div key={word} className={styles.btnWord} onClick={() => { onChoice(word) }}>{word}</div>)
-            })
+        const list = optArr.map((word) => {
+            return (<div key={word} className={styles.btnWord} onClick={() => { onChoice(word) }}>{word}</div>)
+        })
 
-            return (
-                <div className={styles.BtnWrap}>
-                    {list}
-                </div>);
-        }
-
-        return null;
+        return (
+            <div className={styles.BtnWrap}>
+                {list}
+            </div>)
     };
 
 
