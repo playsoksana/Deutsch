@@ -1,8 +1,8 @@
 import React from "react";
 
 
-import Words from "./components/Pages/Words/index.js";
-import Sentens from "./components/Pages/Sentens/index.js";
+import Words from "./Pages/Words/index.js";
+import Sentens from "./Pages/Sentens/index.js";
 
 import {
   BrowserRouter,
@@ -11,7 +11,7 @@ import {
   Link
 } from "react-router-dom";
 
-import './App.css';
+// import './App.css';
 
 function App() {
   return (
