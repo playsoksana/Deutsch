@@ -14,7 +14,6 @@ const TaskWithSentens = (props) => {
 
     const { speak, voices } = useSpeechSynthesis();
 
-
     const sentensDeutsch = props.sentensSort[counter].deutsch;
     const arrSentensDeutsch = sentensDeutsch.match(/\b(\w+)\b/g);
     const lengthSentens = arrSentensDeutsch.length;
@@ -56,7 +55,7 @@ const TaskWithSentens = (props) => {
 
 
     useEffect(() => {
-        if (optArr) {
+        if (optArr && optArr[0]) {
             optArr = [...optArr].sort(() => Math.random() - 0.5);
         }
     }, []);
