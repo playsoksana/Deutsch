@@ -35,3 +35,9 @@
     height: 0.8rem;
     pointer-events: none;
   }
+
+  .container {
+    display:grid;
+    grid-template-columns: 30% 30%;
+gap: 1rem;
+  }

@@ -1,122 +1,145 @@
 const verb = [
     {
-        "deutsch": "anziehen",
-        "native": "надевать (одежду)",
+        "deutsch": "anschauen",
+        "native": "посмотри на",
         id: 10001
     },
     {
-        "deutsch": "ausziehen",
-        "native": "снимать (одежду)",
+        "deutsch": "hören",
+        "native": "слышать",
         id: 10002
     },
     {
-        "deutsch": "antworten",
-        "native": "отвечать",
+        "deutsch": "noch einmal",
+        "native": "Еще раз",
         id: 10003
+    },
+
+    {
+        "deutsch": "zuordnen",
+        "native": "назначить",
+        id: 10004
+    },
+    {
+        "deutsch": "ergänzen",
+        "native": "добавить в",
+        id: 10005
+    },
+    {
+        "deutsch": "anschauen",
+        "native": "посмотри на",
+        id: 10006
+    },
+    {
+        "deutsch": "machen",
+        "native": "делать",
+        id: 10007
+    },
+
+
+
+
+
+    {
+        "deutsch": "richtig",
+        "native": "Правильно",
+        id: 10008
+    },
+    {
+        "deutsch": "verbinden",
+        "native": "Соединять",
+        id: 10009
+    },
+    {
+        "deutsch": "zeichnen",
+        "native": " рисовать",
+        id: 10010
     },
     {
         "deutsch": "arbeiten",
         "native": "работать",
-        id: 10004
-    },
-    {
-        "deutsch": "atmen",
-        "native": "дышать",
-        id: 10005
-    }, {
-        "deutsch": "sich ärgern",
-        "native": "злиться",
-        id: 10006
-    },
-    {
-        "deutsch": "aussehen",
-        "native": "выглядеть",
-        id: 10007
-    },
-    {
-        "deutsch": "backen",
-        "native": "печь",
-        id: 10008
-    },
-    {
-        "deutsch": "baden",
-        "native": "купаться",
-        id: 10009
-    },
-    {
-        "deutsch": "basteln",
-        "native": "мастерить",
-        id: 10010
-    },
-    {
-        "deutsch": "bauen",
-        "native": "строить",
         id: 10011
     },
     {
-        "deutsch": "bedeuten",
-        "native": "означать",
+        "deutsch": "erzählen",
+        "native": "рассказывать",
         id: 10012
     },
+
     {
-        "deutsch": "bekommen",
-        "native": "получать",
+        "deutsch": "variieren",
+        "native": "Отличаться",
         id: 10013
     },
     {
-        "deutsch": "besuchen",
-        "native": "посещать",
+        "deutsch": "schreiben",
+        "native": "Писать",
         id: 10014
     },
     {
-        "deutsch": "bewundern",
-        "native": "восхищаться",
+        "deutsch": "vergleichen",
+        "native": " Сравнивать",
         id: 10015
     },
     {
-        "deutsch": "bilden",
-        "native": "образовывать (построить предложение)",
+        "deutsch": "notieren",
+        "native": "Отмечать",
         id: 10016
     },
     {
-        "deutsch": "besichtigen",
-        "native": " осматривать",
+        "deutsch": "sagen",
+        "native": "Сказать",
         id: 10017
     },
     {
-        "deutsch": "beginnen",
-        "native": "начинать",
+        "deutsch": "meinen",
+        "native": "Думать",
         id: 10018
     },
     {
-        "deutsch": "sich befinden",
-        "native": "находиться",
+        "deutsch": "sprechen",
+        "native": "Говорит",
         id: 10019
     },
     {
-        "deutsch": "bitten",
-        "native": "просить",
+        "deutsch": "lesen",
+        "native": "читать",
         id: 10020
     },
     {
-        "deutsch": "bleiben",
-        "native": "оставаться",
+        "deutsch": "spielen",
+        "native": "Играть",
         id: 10021
     },
     {
-        "deutsch": "bringen",
-        "native": "приносить",
+        "deutsch": "suchen",
+        "native": "Искать",
         id: 10022
     },
     {
-        "deutsch": "brauchen",
-        "native": "нуждаться",
+        "deutsch": "zeigen",
+        "native": "Показывать",
         id: 10023
     },
     {
-        "deutsch": "sich beschäftigen",
-        "native": "заниматься(заниматься со своей собакой)",
+        "deutsch": "fragen",
+        "native": "спрашивать",
         id: 10024
+    },
+    {
+        "deutsch": "markieren",
+        "native": "Намечать",
+        id: 10025
+    },
+    {
+        "deutsch": "nachsprechen",
+        "native": "повторить",
+        id: 10026
+    },
+    {
+        "deutsch": "raten",
+        "native": "Советовать",
+        id: 10027
     },
 ];
 export default verb;

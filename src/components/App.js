@@ -16,12 +16,11 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      <Sentens />
-      {/* <Link to="/">Home</Link> */}
-      {/* <Link to="/sentens">Sätze</Link> */}
+      <Link to="/">Home</Link>
+      <Link to="/sentens">Sätze</Link>
       <Routes>
-        {/* <Route path="/" element={<Words />} /> */}
-        {/* <Route path="/" element={<Sentens />} /> */}
+        <Route path="/" element={<Words />} />
+        <Route path="/sentens" element={<Sentens />} />
       </Routes>
     </BrowserRouter>
   );

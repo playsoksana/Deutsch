@@ -5,10 +5,12 @@ import BoxWithTextNativeLanguage from "../BoxWithTextNativeLanguage/index.js";
 import BoxWithTextGerman from "../BoxWithTextGerman/index.js";
 import Answers from "../Answers/index.js";
 
+import styles from "./styles.module.css";
+
 const ColumnsWithWords = (props) => {
     const [currId, setCurrId] = useState(null);
     const [richtik, setRichtik] = useState([]);
-
+    console.log(props);
 
 
     const { speak, voices } = useSpeechSynthesis();
@@ -84,7 +86,7 @@ const ColumnsWithWords = (props) => {
 
     const renderColumsForTask = () => {
         return (
-            <div className="Container">
+            <div className={styles.Container}>
                 <div className="scroll">
                     {renderNativeColumn()}
                 </div>

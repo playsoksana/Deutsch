@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 const Answers = (props) => {
     return (
-        <div className="Container">
+        <div className={styles.container}>
             <div className={styles.rich}>
                 {props.chosenWord?.native}
             </div>
